@@ -1,0 +1,19 @@
+# Podstawowe biblioteki wymagane do działania projektu Django Blog Szymon Blawat
+
+Django==5.1.7
+djangorestframework==3.15.1
+
+# Dodatkowe biblioteki jeśli korzystasz z timezone w Windows
+tzdata==2023.4
+
+# Jeśli korzystałeś z Pillow (np. dla uploadów obrazków)
+# Pillow==10.0.1
+
+# Jeżeli korzystałeś z bootstrap5 dla Django
+# django-bootstrap5==23.3
+
+# Jeżeli korzystałeś z crispy-forms do lepszych formularzy
+# django-crispy-forms==2.0
+
+# Jeśli chcesz używać debug toolbar (do dev)
+# django-debug-toolbar==4.2.0
