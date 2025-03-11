@@ -1,0 +1,24 @@
+{% extends 'blog_sblawat/base.html' %}
+{% load static %}
+
+{% block tytul_strony %}Wpisy - Blog Szymona Blawata{% endblock %}
+
+{% block zawartosc %}
+    <h1 class="mb-4">📚 Lista wpisów</h1>
+
+    {% for post in posts %}
+        <div class="card mb-4 shadow-sm">
+            <div class="card-body">
+                <h2>📄 <a href="{% url 'post_detail' post.pk %}" class="text-success">{{ post.title }}</a></h2>
+                <p class="text-muted">🕒 {{ post.created_at|date:"d-m-Y H:i" }}</p>
+                <p>{{ post.content|truncatechars:200 }}</p>
+                <div class="d-flex justify-content-between align-items-center">
+                    <small class="text-secondary">👍 {{ post.likes_count }} | 👁️ {{ post.views }}</small>
+                    <a href="{% url 'post_detail' post.pk %}" class="btn btn-primary btn-sm">Czytaj więcej ➡️</a>
+                </div>
+            </div>
+        </div>
+    {% empty %}
+        <p>😢 Brak postów do wyświetlenia.</p>
+    {% endfor %}
+{% endblock %}

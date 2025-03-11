@@ -1,0 +1,103 @@
+/* Ogólne */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212; /* ciemniejszy, bardziej neutralny */
+    color: #e0e0e0; /* jaśniejszy tekst dla lepszej czytelności */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* ważne dla przyklejonej stopki */
+}
+
+a {
+    color: #29d398;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #1eb980;
+}
+
+main.container {
+    flex: 1; /* przestrzeń główna rośnie */
+}
+
+/* Navbar */
+.navbar {
+    background-color: #1a1a1a !important;
+    color: #e0e0e0;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #29d398 !important;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #1f1f1f;
+    border: 1px solid #333;
+    color: #e0e0e0;
+}
+
+/* Karty (posty) */
+.card {
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+    border: 1px solid #333;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 10px rgba(41, 211, 152, 0.2);
+}
+
+/* Przycisk */
+.btn-primary {
+    background-color: #29d398;
+    border-color: #29d398;
+    color: #121212;
+}
+
+.btn-primary:hover {
+    background-color: #1eb980;
+    border-color: #1eb980;
+}
+
+/* Footer */
+footer {
+    background-color: #1a1a1a;
+    color: #aaa;
+    padding: 1rem;
+    text-align: center;
+    margin-top: auto; /* to działa razem z flex na body */
+}
+
+/* Formularze */
+input.form-control,
+textarea.form-control {
+    background-color: #1d1d1d;
+    color: #f0f0f0;
+    border: 1px solid #333;
+}
+
+input.form-control:focus,
+textarea.form-control:focus {
+    border-color: #29d398;
+    box-shadow: 0 0 0 0.2rem rgba(41, 211, 152, 0.25);
+}
+
+/* Nagłówki */
+h1, h2, h3, h4, h5 {
+    color: #ffffff; /* wyraźniejszy biały nagłówek */
+}
+
+/* Drobne elementy */
+.text-muted {
+    color: #bbbbbb !important;
+}
+
+.text-secondary {
+    color: #999999 !important;
+}
